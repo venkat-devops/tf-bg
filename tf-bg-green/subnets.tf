@@ -7,7 +7,7 @@ resource "aws_subnet" "tf_bg_subnet" {
   count                   = "${local.subnet_count}"
   vpc_id                  = "${aws_vpc.tf_bg_vpc.id}"
   availability_zone       = "${element(local.azs, count.index)}"
-  cidr_block              = "10.0.${123 + count.index + 1}.0/24"
+  cidr_block              = "10.0.${local.subnet_count + count.index + 1}.0/24"
   map_public_ip_on_launch = true
 
   tags {
