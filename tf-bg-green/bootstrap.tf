@@ -9,6 +9,6 @@ terraform {
     encrypt = true
     bucket  = "bg-tfstate-1675"
     region  = "eu-west-2"
-    key     = "v2"
+    key     = "v2.state"
   }
 }
