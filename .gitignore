@@ -1,0 +1,4 @@
+*.terraform/
+*.tfplan
+*.tfvars
+.DS_STORE

@@ -1,6 +1,6 @@
 resource "aws_security_group" "tf_bg_sg" {
   description = "Terraform Blue/Green"
-  vpc_id      = "${var.vpc_id}"
+  vpc_id      = "${aws_vpc.tf_bg_vpc.id}"
   name        = "tf-bg-sg-v${var.app_ver}"
 
   tags {
