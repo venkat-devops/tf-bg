@@ -33,7 +33,7 @@ resource "aws_route_table" "tf_bg_public_rt" {
 
 # Route table association
 resource "aws_route_table_association" "tf_bg_rt_assoc" {
-  count = 3
+  count          = 3
   subnet_id      = "${element(aws_subnet.tf_bg_subnet.*.id, count.index)}"
   route_table_id = "${aws_route_table.tf_bg_public_rt.id}"
 }
